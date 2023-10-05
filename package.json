@@ -14,8 +14,8 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs . && prettier -c src test",
-    "lint:fix": "eslint --cache --ext .ts,.js,.mjs,.cjs . --fix && prettier -c src test -w",
+    "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs . && prettier -c src",
+    "lint:fix": "eslint --cache --ext .ts,.js,.mjs,.cjs . --fix && prettier -c src -w",
     "prepack": "pnpm run build",
     "cf-kv-exporter": "jiti ./src/cli.ts",
     "release": "pnpm test && changelogen --release && npm publish && git push --follow-tags",
