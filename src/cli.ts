@@ -142,6 +142,8 @@ const exportCommand = defineCommand({
       },
       { concurrency: 32, interval: 100 },
     );
+
+    progress.stop();
   },
 });
 
