@@ -1,6 +1,6 @@
 {
   "name": "cf-kv-exporter",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "CLI to export Cloudflare KV Namespace",
   "repository": "pi0/cf-kv-exporter",
   "license": "MIT",
