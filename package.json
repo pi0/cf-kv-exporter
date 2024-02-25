@@ -23,21 +23,21 @@
     "test:types": "tsc --noEmit --skipLibCheck"
   },
   "dependencies": {
-    "citty": "^0.1.4",
+    "citty": "^0.1.6",
     "cli-progress": "^3.12.0",
     "consola": "^3.2.3",
-    "unstorage": "^1.9.0"
+    "unstorage": "^1.10.1"
   },
   "devDependencies": {
-    "@types/cli-progress": "^3.11.3",
-    "@types/node": "^20.8.2",
+    "@types/cli-progress": "^3.11.5",
+    "@types/node": "^20.11.20",
     "changelogen": "^0.5.5",
-    "eslint": "^8.50.0",
+    "eslint": "^8.57.0",
     "eslint-config-unjs": "^0.2.1",
-    "jiti": "^1.20.0",
-    "prettier": "^3.0.3",
-    "typescript": "^5.2.2",
+    "jiti": "^1.21.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3",
     "unbuild": "^2.0.0"
   },
-  "packageManager": "pnpm@8.6.12"
+  "packageManager": "pnpm@8.15.4"
 }
