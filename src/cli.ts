@@ -7,11 +7,11 @@ import cloudflareKVHTTP, {
   type KVHTTPOptions,
 } from "unstorage/drivers/cloudflare-kv-http";
 import fsLite from "unstorage/drivers/fs-lite";
-import consola from "consola";
+import { consola } from "consola";
 import cliProgress from "cli-progress";
 
-import { name, version, description } from "../package.json";
-import { runParallel } from "./utils";
+import pkg from "../package.json" with { type: "json" };
+import { runParallel } from "./utils.ts";
 
 const envMap = {
   CF_ACCOUNT_ID: "accountId",
@@ -158,9 +158,9 @@ function onError(error: unknown) {
 
 const mainCommand = defineCommand({
   meta: {
-    name,
-    version,
-    description,
+    name: pkg.name,
+    version: pkg.version,
+    description: pkg.description,
   },
   subCommands: {
     export: exportCommand,
