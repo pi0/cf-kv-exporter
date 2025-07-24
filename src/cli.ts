@@ -123,24 +123,29 @@ const exportCommand = defineCommand({
 
     // Export keys
     consola.start(`Exporting ${kvKeys.length} keys...`);
-    const progress = new cliProgress.Bar({});
-    progress.start(kvKeys.length, localKeys.length);
 
-    // Cloudflare rate limits: https://developers.cloudflare.com/fundamentals/api/reference/limits/#:~:text=The%20global%20rate%20limit%20for,API%20key%2C%20or%20API%20token.
-    // 1200 requests per 5 minute ~ 4 requests per second
+    const progress = new cliProgress.Bar({
+      format:
+        "export progress [{bar}] {percentage}% | ETA: {eta_formatted} | {value}/{total}",
+    });
+    progress.start(kvKeys.length, localKeys.length);
 
     await runParallel(
       new Set(keys),
       async (key) => {
         try {
           const value = await storage.getItemRaw(`src:${key}`);
-          await storage.setItemRaw(`out:${key}`, value);
+          if (value) {
+            await storage.setItemRaw(`out:${key}`, value);
+          }
           progress.increment();
         } catch (error) {
           onError(error);
         }
       },
-      { concurrency: 32, interval: 100 },
+      // Cloudflare rate limits: https://developers.cloudflare.com/fundamentals/api/reference/limits/#:~:text=The%20global%20rate%20limit%20for,API%20key%2C%20or%20API%20token.
+      // 1200 requests per 5 minute ~ 4 requests per second
+      { concurrency: 4, interval: 1000 },
     );
 
     progress.stop();
