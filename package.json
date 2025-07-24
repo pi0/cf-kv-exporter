@@ -14,8 +14,8 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs . && prettier -c src",
-    "lint:fix": "eslint --cache --ext .ts,.js,.mjs,.cjs . --fix && prettier -c src -w",
+    "lint": "eslint --cache . && prettier -c src",
+    "lint:fix": "eslint --cache . --fix && prettier -c src -w",
     "prepack": "pnpm run build",
     "cf-kv-exporter": "jiti ./src/cli.ts",
     "release": "pnpm test && changelogen --release && npm publish && git push --follow-tags",
@@ -25,19 +25,19 @@
   "dependencies": {
     "citty": "^0.1.6",
     "cli-progress": "^3.12.0",
-    "consola": "^3.2.3",
-    "unstorage": "^1.10.2"
+    "consola": "^3.4.2",
+    "unstorage": "^1.16.1"
   },
   "devDependencies": {
-    "@types/cli-progress": "^3.11.5",
-    "@types/node": "^20.12.5",
-    "changelogen": "^0.5.5",
-    "eslint": "^8.57.0",
-    "eslint-config-unjs": "^0.2.1",
-    "jiti": "^1.21.0",
-    "prettier": "^3.2.5",
-    "typescript": "^5.4.4",
-    "unbuild": "^2.0.0"
+    "@types/cli-progress": "^3.11.6",
+    "@types/node": "^24.1.0",
+    "changelogen": "^0.6.2",
+    "eslint": "^9.31.0",
+    "eslint-config-unjs": "^0.5.0",
+    "jiti": "^2.5.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.8.3",
+    "unbuild": "^3.6.0"
   },
-  "packageManager": "pnpm@8.15.6"
+  "packageManager": "pnpm@10.13.1"
 }
