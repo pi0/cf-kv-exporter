@@ -26,20 +26,20 @@
     "citty": "^0.1.6",
     "cli-progress": "^3.12.0",
     "consola": "^3.4.2",
-    "unstorage": "^1.16.1"
+    "unstorage": "^1.17.3"
   },
   "devDependencies": {
     "@types/cli-progress": "^3.11.6",
-    "@types/node": "^24.1.0",
-    "@upstash/redis": "^1.35.1",
+    "@types/node": "^24.10.1",
+    "@upstash/redis": "^1.35.6",
     "changelogen": "^0.6.2",
-    "dotenv": "^17.2.0",
-    "eslint": "^9.31.0",
+    "dotenv": "^17.2.3",
+    "eslint": "^9.39.1",
     "eslint-config-unjs": "^0.5.0",
-    "jiti": "^2.5.0",
+    "jiti": "^2.6.1",
     "prettier": "^3.6.2",
-    "typescript": "^5.8.3",
-    "unbuild": "^3.6.0"
+    "typescript": "^5.9.3",
+    "unbuild": "^3.6.1"
   },
-  "packageManager": "pnpm@10.13.1"
+  "packageManager": "pnpm@10.23.0"
 }
