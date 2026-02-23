@@ -34,7 +34,7 @@
     "@upstash/redis": "^1.35.8",
     "changelogen": "^0.6.2",
     "dotenv": "^17.2.3",
-    "eslint": "^9.39.2",
+    "eslint": "^10.0.2",
     "eslint-config-unjs": "^0.5.0",
     "jiti": "^2.6.1",
     "prettier": "^3.7.4",
